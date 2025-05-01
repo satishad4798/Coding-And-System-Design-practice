@@ -17,7 +17,7 @@ public class Data_stucture {
         ArrayList<Integer> list = new ArrayList<>(Collections.nCopies(5, 7));
         int[] numbers = {5, 3, 9, 1, 7};
 
-        // Sort the array
+        // Sort the coding.array
         Collections.sort(test);
         System.out.println(Collections.binarySearch(test, 4)); // Output: [1, 3, 5, 7, 9]
 

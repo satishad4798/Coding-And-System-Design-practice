@@ -1,4 +1,4 @@
-package interval;
+package coding.interval;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,7 +18,7 @@ public class insertInterval {
         int[] newInterval = {2, 8};
         List<int[]> mergedInterval = new ArrayList<>();
 
-        //copy all starting non-overlapping interval
+        //copy all starting non-overlapping coding.interval
         int i = 0;
         int length = intervals.length;
 
@@ -37,7 +37,7 @@ public class insertInterval {
 
         mergedInterval.add(newInterval);
 
-        //copy rest of the array
+        //copy rest of the coding.array
         while (i < length) {
             mergedInterval.add(intervals[i++]);
         }

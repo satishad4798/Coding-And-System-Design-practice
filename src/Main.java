@@ -25,7 +25,7 @@ public class Main {
 
         for (int i = 0; i < nums.length && right < nums.length; i++) {
 
-            // until first sub-array is created
+            // until first sub-coding.array is created
             if (i < k) {
                 current_sum = current_sum + nums[i];
 
@@ -34,7 +34,7 @@ public class Main {
                     right = i;
                 }
             }
-            // finding best sub-array
+            // finding best sub-coding.array
             else {
                 right++;
                 current_sum = current_sum - nums[left] + nums[right];

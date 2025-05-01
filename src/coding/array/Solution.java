@@ -1,4 +1,4 @@
-package array;
+package coding.array;
 
 class test {
     public static void main(String[] args) {

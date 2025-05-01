@@ -12,7 +12,7 @@ public class linkedList {
     }
 
     private static void convertArrayToLIST(int[] array) {
-        //convert array to linked List.
+        //convert coding.array to linked List.
         ListNode head = new ListNode(array[0]);
         ListNode current = head;
         for (int i = 1; i < array.length; i++) {

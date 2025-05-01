@@ -1,4 +1,4 @@
-package two.pointer;
+package coding.twoPointer;
 
 public class container_with_most_water {
 
