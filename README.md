@@ -182,13 +182,17 @@ public static Object deepCopy(Object object) throws IOException, ClassNotFoundEx
 - Always use deep copy when working with nested or mutable objects to avoid unintended side effects.
 - Use appropriate methods like `clone()`, constructors, or serialization based on the complexity of the object.
 
-# hints/ tips
+# Hints/ Tips
 
-## 1. accessing each value of string
+- 1. accessing each value of string
+    ```java
+    string.chatAt(i)
+    char[] wrd = word.toCharArray();
+    ```
+- 2.  pick element and dont pick element tree problem  : use binary tree with taken/not taken
 
-string.chatAt(i)
-
-## 2.
+- 3. recursion pattern
+![alt text](PXL_20250507_214716932.MP~2.jpg)
 
 # Coding patterns
 
