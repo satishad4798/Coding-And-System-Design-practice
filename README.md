@@ -5,18 +5,18 @@
 - [How to approach a problem](#how-to-approach-a-problem)
 - [Warnings section](#warnings-section)
 - [Handling Different Types with Deep Copy Examples](#handling-different-types-with-deep-copy-examples)
-  - [1D Array to 2D Array](#1-1d-array-to-2d-array)
-  - [Primitive Arrays](#2-primitive-arrays)
-  - [List of Strings](#3-list-of-strings)
-  - [Maps](#4-maps)
-  - [Nested Objects](#5-nested-objects)
-  - [Collections](#6-collections)
-  - [Serialization for Deep Copy](#7-serialization-for-deep-copy)
+    - [1D Array to 2D Array](#1-1d-array-to-2d-array)
+    - [Primitive Arrays](#2-primitive-arrays)
+    - [List of Strings](#3-list-of-strings)
+    - [Maps](#4-maps)
+    - [Nested Objects](#5-nested-objects)
+    - [Collections](#6-collections)
+    - [Serialization for Deep Copy](#7-serialization-for-deep-copy)
 - [Hints/Tips](#hints-tips)
 - [Coding patterns](#coding-patterns)
-  - [Two pointer approach](#1-two-pointer-approach)
-  - [Sliding window](#2sliding-window)
-  - [Merge interval](#2merge-interval)
+    - [Two pointer approach](#1-two-pointer-approach)
+    - [Sliding window](#2sliding-window)
+    - [Merge interval](#2merge-interval)
 - [Stack](#stack)
 - [Tree](#tree)
 - [Approach To Solve](#approach-to-solve)
@@ -111,6 +111,13 @@ nestedMap.
 put("outerKey",new HashMap<>(innerMap)); // Deep copy
 ```
 
+### 5  **Recursion /Dynamic problem**
+
+- climb stairs question :
+    - write recursive solution by drawing a tree.
+    - then see any repeating subtree (if yes save to result for future is same subtree comes )
+      ![img.png](img.png)
+
 ### 5. **Nested Objects**
 
 - **Problem**: If an object contains nested objects, changes to the nested objects will reflect in the original object.
@@ -184,15 +191,21 @@ public static Object deepCopy(Object object) throws IOException, ClassNotFoundEx
 
 # Hints/ Tips
 
-- 1. accessing each value of string
-    ```java
-    string.chatAt(i)
-    char[] wrd = word.toCharArray();
-    ```
-- 2.  pick element and dont pick element tree problem  : use binary tree with taken/not taken
+-
+    1. accessing each value of string
 
-- 3. recursion pattern
-![alt text](PXL_20250507_214716932.MP~2.jpg)
+```java
+string.chatAt(i)
+
+char[] wrd = word.toCharArray();
+```
+
+-
+    2. pick element and dont pick element tree problem  : use binary tree with taken/not taken
+
+-
+    3. recursion pattern
+       ![alt text](PXL_20250507_214716932.MP~2.jpg)
 
 # Coding patterns
 
