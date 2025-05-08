@@ -2,7 +2,7 @@ package coding.recursion;
 
 class ClimbStairs {
 
-    public static vvoid main(String[] args) {
+    public static void main(String[] args) {
         int result = climbStairs(3);
         System.out.println(result);
     }

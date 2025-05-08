@@ -111,12 +111,15 @@ nestedMap.
 put("outerKey",new HashMap<>(innerMap)); // Deep copy
 ```
 
-### 5  **Recursion /Dynamic problem**
+### 5. **Recursion / Dynamic Programming Problem**
 
-- climb stairs question :
-    - write recursive solution by drawing a tree.
-    - then see any repeating subtree (if yes save to result for future is same subtree comes )
-      ![img.png](img.png)
+- **Climb Stairs Question**:
+    - Start by writing a recursive solution and visualize it using a tree diagram.
+    - Identify any repeating subtrees in the diagram. If found, store their results to reuse them later.
+      ![img.png](static/img.png)
+    - **Key Insight**: When climbing `n` steps, you can take either 1 or 2 steps at a time.
+        - Check if the result for a specific number of steps has already been calculated.
+        - Save the result of `climbStairs(x)` to avoid recalculating it in the future.
 
 ### 5. **Nested Objects**
 
