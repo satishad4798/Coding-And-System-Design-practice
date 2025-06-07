@@ -1,5 +1,4 @@
-# Scenario Based Interview Questions For Java Developer
-
+# Scenario-Based Interview Questions For Java Developers
 
 ## Core Java (General Questions)
 
