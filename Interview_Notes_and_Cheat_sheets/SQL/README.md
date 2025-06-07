@@ -1,3 +1,7 @@
+# SQL Practice
+- https://www.sql-practice.com/
+- https://app.testdome.com/screening/test/658d3e884d314fd3b73c6a96cc16858f
+
 # SQL Interview Cheat Sheet
 
 This cheat sheet provides a quick overview of essential SQL commands, concepts, and functions frequently encountered in interviews.
