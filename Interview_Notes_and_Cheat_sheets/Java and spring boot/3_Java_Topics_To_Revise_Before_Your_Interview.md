@@ -47,10 +47,6 @@
 
 ### Advanced OOP and Design Patterns
 
-- SOLID principles
-- Common design patterns (Factory, Singleton, Builder, Observer, etc.)
-- Composition vs Inheritance
-
 ### Java Collections (Advanced)
 
 - Internal working of `HashMap`, `HashSet`, and `TreeSet`

@@ -3,6 +3,59 @@
 ## Core Java (General Questions)
 
 - Explain how you would handle a scenario where a method needs to be thread-safe but also efficient.
+
+  **Answer:**
+  To make a method both thread-safe and efficient:
+
+  1. **Minimize Lock Scope:** Only synchronize the critical section (the part that modifies shared state), not the entire method. This reduces contention and improves performance.
+  2. **Use Modern Concurrency Utilities:** Prefer `java.util.concurrent` classes like `ReentrantLock`, `AtomicInteger`, `ConcurrentHashMap`, etc., which are designed for high concurrency and better performance than traditional synchronization.
+  3. **Leverage Immutability:** If possible, design your objects to be immutable. Immutable objects are inherently thread-safe and require no synchronization.
+  4. **Double-Checked Locking:** For expensive initialization (like singletons), use double-checked locking with a `volatile` variable to reduce synchronization overhead.
+  5. **Read/Write Locks:** If your method is read-heavy, use `ReadWriteLock` to allow multiple threads to read simultaneously while still synchronizing writes.
+
+  **Example 1: Using Atomic Variables**
+  ```java
+  private final AtomicInteger counter = new AtomicInteger(0);
+
+  public int increment() {
+      return counter.incrementAndGet(); // Thread-safe and efficient
+  }
+  ```
+
+  **Example 2: Using Synchronized Block (minimized scope)**
+  ```java
+  private final Object lock = new Object();
+  private int value;
+
+  public void updateValue(int newValue) {
+      // Only synchronize the critical section
+      synchronized (lock) {
+          value = newValue;
+      }
+  }
+  ```
+
+  **Example 3: Using Concurrent Collections**
+  ```java
+  private final ConcurrentHashMap<String, Integer> map = new ConcurrentHashMap<>();
+
+  public void putValue(String key, Integer value) {
+      map.put(key, value); // Thread-safe and efficient
+  }
+  ```
+
+  **Summary Table:**
+
+  | Approach                        | Thread-Safe | Efficient | Use Case                        |
+  |----------------------------------|-------------|-----------|----------------------------------|
+  | Synchronized method/block        | Yes         | Sometimes | Simple critical sections         |
+  | Atomic variables                 | Yes         | Yes       | Counters, flags                  |
+  | Concurrent collections           | Yes         | Yes       | Shared maps, sets, queues        |
+  | ReadWriteLock                    | Yes         | Yes       | Read-heavy scenarios             |
+  | Immutability                     | Yes         | Yes       | Data that doesn't change         |
+
+  **Best Practice:**
+  Choose the simplest approach that meets your thread-safety and performance needs. Avoid over-synchronization, and use concurrent utilities provided by Java for optimal efficiency.
 - How would you implement a custom sorting algorithm without using Java's built-in sort methods?
 - How would you design an immutable class in Java? What scenarios would require immutability?
 - Given two unsorted arrays, how would you find the common elements between them?
