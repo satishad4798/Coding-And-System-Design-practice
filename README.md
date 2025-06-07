@@ -113,6 +113,14 @@ put("outerKey",new HashMap<>(innerMap)); // Deep copy
 
 ### 5. **Recursion / Dynamic Programming Problem**
 
+- how to solve DP question
+    1. Determine the recurrence relation for the problem.
+    2. Identify the base case(s) to stop the recursion.
+    3. Implement the recursive solution based on the recurrence relation.
+    4. Optimize the solution by adding memoization to store intermediate results.
+    5. Transform the recursive solution into an iterative "Bottom-Up" dynamic programming approach.
+    6. Apply further optimizations, if possible, to improve time or space complexity.
+ 
 - **Climb Stairs Question**:
     - Start by writing a recursive solution and visualize it using a tree diagram.
     - Identify any repeating subtrees in the diagram. If found, store their results to reuse them later.
