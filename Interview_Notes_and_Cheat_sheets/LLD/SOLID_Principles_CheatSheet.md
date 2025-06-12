@@ -1,5 +1,13 @@
-    
 # SOLID Principles - Interview Cheat Sheet with Examples
+
+| Principle | Meaning                                 | Example                                  |
+|-----------|------------------------------------------|------------------------------------------|
+| **SRP**   | One reason to change                     | Separate `Invoice`, `Mailer`, `saveToDb`   |
+| **OCP**   | Open to extend, closed to modify         | Saving to different DB types with interface; different payment types support using interface rather than if-else |
+| **LSP**   | 1. Child should replace parent safely  <br> 2. If class B is subtype of class A, then B should be able to replace A without breaking behavior of the program <br> 3. Subclass should extend capability of parent, not narrow it down    | Ostrich shouldn't extend `FlyingBird`; Electric vehicle shouldn't extend `Car` with `turnOnEngine` method |
+| **ISP**   | Don’t force unused methods               | Use `Workable`, `Eatable` separately. Ex: Waiter class should not implement `cookFood` (chef's work); Robot should not implement `eat` |
+| **DIP**   | class should depend on interface rather than concrete classes    | Inject `Database` interface; Macbook with WiredKeyboard, WiredMouse, BluetoothMouse, BluetoothKeyboard (all via interfaces)            |
+
 
 ## ✅ 1. S – Single Responsibility Principle (SRP)
 > 📌 “One class should have one reason to change.”
@@ -43,50 +51,46 @@ public class InvoiceMailer {
 > 📌 “Open for extension, closed for modification.”
 
 ### 👔 Interview-style Example:
-Suppose we’re calculating **employee bonuses**.
+Suppose we’re saving data to different types of databases.
 
 🛑 **Bad Design**:
 ```java
-public class BonusCalculator {
-    public double calculateBonus(Employee emp) {
-        if (emp.getType().equals("PERMANENT"))
-            return emp.getSalary() * 0.1;
-        else if (emp.getType().equals("CONTRACT"))
-            return emp.getSalary() * 0.05;
+public class DataSaver {
+    public void save(String data, String dbType) {
+        if (dbType.equals("MYSQL")) {
+            // Save to MySQL
+        } else if (dbType.equals("MONGODB")) {
+            // Save to MongoDB
+        }
+        // Add more if-else for new DB types
     }
 }
 ```
 
 ✅ **Better Design (OCP Applied)**:
 ```java
-interface Bonus {
-    double calculate(double salary);
+interface Database {
+    void save(String data);
 }
 
-class PermanentBonus implements Bonus {
-    public double calculate(double salary) { return salary * 0.1; }
+class MySQLDatabase implements Database {
+    public void save(String data) { /* Save to MySQL */ }
 }
 
-class ContractBonus implements Bonus {
-    public double calculate(double salary) { return salary * 0.05; }
+class MongoDBDatabase implements Database {
+    public void save(String data) { /* Save to MongoDB */ }
+}
+
+class DataSaver {
+    private Database db;
+    public DataSaver(Database db) { this.db = db; }
+    public void save(String data) { db.save(data); }
 }
 ```
 
-🎯 **Interview Tip**: “Now I can add new bonus types without touching existing logic. This makes the code safer and extensible.”
+🎯 **Interview Tip**: “Now I can add new database types without modifying existing logic. This makes the code safer and extensible.”
 
-
-- example 2
-
-🔧 Bad: Adding if-else for each new payment type inside PaymentProcessor.
-✅ Good:
-
-Define interface Payment
-
-Extend with UPIPayment, CardPayment, etc.
-
-🧠 Interview Tip: "Add new features without modifying tested code."
-
-
+- Payment example: Instead of adding if-else for each new payment type, define a Payment interface and extend with UPIPayment, CardPayment, etc.
 
 ---
 
@@ -94,6 +98,7 @@ Extend with UPIPayment, CardPayment, etc.
 > 📌 “Subtypes must be substitutable for their base types.”
 
 ### 👔 Interview-style Example:
+
 ```java
 class Bird {
     public void fly() { ... }
@@ -122,6 +127,41 @@ class Sparrow extends Bird implements FlyingBird {
 
 class Ostrich extends Bird {
     // Doesn't implement fly - now valid
+}
+```
+
+```java
+class Vehicle {
+    public void startEngine() { ... }
+}
+
+class Car extends Vehicle {
+    public void startEngine() { /* Start car engine */ }
+}
+
+class ElectricScooter extends Vehicle {
+    public void startEngine() {
+        throw new UnsupportedOperationException("No engine to start!");
+    }
+}
+```
+
+🛑 **Violation**: ElectricScooter is a Vehicle, but doesn't have an engine.
+
+✅ **Fix: Separate hierarchy.**
+```java
+class Vehicle { }
+
+interface EnginePowered {
+    void startEngine();
+}
+
+class Car extends Vehicle implements EnginePowered {
+    public void startEngine() { /* Start car engine */ }
+}
+
+class ElectricScooter extends Vehicle {
+    // No engine, doesn't implement EnginePowered
 }
 ```
 
@@ -171,6 +211,52 @@ class Robot implements Workable {
 }
 ```
 
+🛑 **Bad: Forcing all employees to implement all methods**
+```java
+interface RestaurantEmployee {
+    void washDishes();
+    void cookFood(); // Only for chefs
+    void serveFood(); // Only for waiters
+}
+
+class Waiter implements RestaurantEmployee {
+    public void washDishes() { /* Not a waiter's responsibility */ }
+    public void cookFood() { /* Not a waiter's responsibility */ }
+    public void serveFood() { System.out.println("Serving food to customers"); }
+}
+
+class Chef implements RestaurantEmployee {
+    public void washDishes() { /* Not a chef's responsibility */ }
+    public void cookFood() { System.out.println("Cooking food in the kitchen"); }
+    public void serveFood() { /* Not a chef's responsibility */ }
+}
+```
+
+✅ **Better: Segregate interfaces by responsibility**
+```java
+interface DishWasher {
+    void washDishes();
+}
+interface Cook {
+    void cookFood();
+}
+interface Server {
+    void serveFood();
+}
+
+class ISPWaiter implements Server {
+    public void serveFood() {
+        System.out.println("Serving food to customers");
+    }
+}
+
+class ISPChef implements Cook {
+    public void cookFood() {
+        System.out.println("Cooking food in the kitchen");
+    }
+}
+```
+
 🎯 **Interview Tip**: “Clients should only see what they need.”
 
 ---
@@ -180,7 +266,7 @@ class Robot implements Workable {
 
 ### 👔 Interview-style Example:
 
-🛑 **Bad**:
+🛑 **Bad (Database Example)**:
 ```java
 class MySQLDatabase {
     void save(String data) { ... }
@@ -206,18 +292,64 @@ class MySQLDatabase implements Database {
 
 class ReportService {
     private Database db;
-
     public ReportService(Database db) {
         this.db = db;
     }
-
     public void generateReport(String data) {
         db.save(data);  // Uses abstraction
     }
 }
 ```
 
-🎯 **Interview Tip**: “This allows easy swapping of databases, better testing using mocks, and loose coupling.”
+🛑 **Bad (Keyboard/Mouse Example)**:
+```java
+class WiredKeyboard {
+    void type() { ... }
+}
+class WiredMouse {
+    void click() { ... }
+}
+class Macbook {
+    private WiredKeyboard keyboard = new WiredKeyboard();
+    private WiredMouse mouse = new WiredMouse();
+    // Tightly coupled to specific implementations
+}
+```
+
+✅ **Better (using abstraction)**:
+```java
+interface Keyboard {
+    void type();
+}
+interface Mouse {
+    void click();
+}
+
+class WiredKeyboard implements Keyboard {
+    public void type() { System.out.println("Typing with wired keyboard"); }
+}
+class BluetoothKeyboard implements Keyboard {
+    public void type() { System.out.println("Typing with Bluetooth keyboard"); }
+}
+class WiredMouse implements Mouse {
+    public void click() { System.out.println("Clicking with wired mouse"); }
+}
+class BluetoothMouse implements Mouse {
+    public void click() { System.out.println("Clicking with Bluetooth mouse"); }
+}
+
+class Macbook {
+    private Keyboard keyboard;
+    private Mouse mouse;
+    public Macbook(Keyboard keyboard, Mouse mouse) {
+        this.keyboard = keyboard;
+        this.mouse = mouse;
+    }
+    // Now Macbook can work with any keyboard or mouse implementation
+}
+```
+
+🎯 **Interview Tip**: “This allows easy swapping of databases or input devices, better testing using mocks, and loose coupling.”
 
 ---
 
@@ -225,11 +357,11 @@ class ReportService {
 
 | Principle | Meaning                                 | Example                                  |
 |-----------|------------------------------------------|------------------------------------------|
-| **SRP**   | One reason to change                     | Separate `Invoice`, `Mailer`, `Logger`   |
-| **OCP**   | Open to extend, closed to modify         | Bonus strategies with `Bonus` interface  |
-| **LSP**   | Child should replace parent safely       | `Ostrich` shouldn't extend `FlyingBird`  |
-| **ISP**   | Don’t force unused methods               | Use `Workable`, `Eatable` separately     |
-| **DIP**   | Depend on abstractions, not concretes    | Inject `Database` interface              |
+| **SRP**   | One reason to change                     | Separate `Invoice`, `Mailer`, `saveToDb`   |
+| **OCP**   | Open to extend, closed to modify         | Saving to different DB types with interface; different payment types support using interface rather than if-else |
+| **LSP**   | Child should replace parent safely       | Ostrich shouldn't extend `FlyingBird`; Electric vehicle shouldn't extend `Car` with `turnOnEngine` method |
+| **ISP**   | Don’t force unused methods               | Use `Workable`, `Eatable` separately. Ex: Waiter class should not implement `cookFood` (chef's work); Robot should not implement `eat` |
+| **DIP**   | Depend on abstractions, not concretes    | Inject `Database` interface; Macbook with WiredKeyboard, WiredMouse, BluetoothMouse, BluetoothKeyboard (all via interfaces) |
 
 ---
 
