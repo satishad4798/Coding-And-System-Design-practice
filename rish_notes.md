@@ -1,4 +1,43 @@
-Here are study notes generated from the provided sources:
+<!-- filepath: /Users/satishAd47/CODING_WORSPACES/Coding_And_System_Design/rish_notes.md -->
+# Java & System Design Interview Study Guide
+
+---
+
+## 📑 Table of Contents
+
+- [Java Language Features](#1-java-language-features)
+- [SOLID Principles](#solid-principles)
+- [Java OOP Pillars](#java-oop-pillars)
+- [Abstract Class vs. Interface](#abstract-class-vs-interface)
+- [Relationships in Java](#relationships-in-java)
+- [Modifiers: Access, Static, Final](#modifiers-access-static-final)
+- [Variable Arguments (VARARGS)](#variable-arguments-varargs)
+- [String and Immutability](#string-and-immutability)
+- [Primitive vs. Reference Data Types](#primitive-vs-reference-data-types)
+- [Memory Management](#memory-management)
+- [Exception Handling](#exception-handling)
+- [Java Streams](#java-streams)
+- [Functional Interfaces](#functional-interfaces)
+- [Design Patterns](#design-patterns)
+- [Custom Annotations](#custom-annotations)
+- [Sorting in Java](#sorting-in-java)
+- [Working of HashMap](#working-of-hashmap)
+- [Multithreading](#multithreading)
+- [High-Level Design (HLD)](#high-level-design-hld)
+- [Network Protocols](#141-network-protocols)
+- [CAP Theorem](#cap-theorem)
+- [Scaling a System (From Zero to Million)](#scaling-a-system-from-zero-to-million)
+- [Sharding (Horizontal Scaling / Partitioning)](#sharding-horizontal-scaling--partitioning)
+- [Key-Value Data Store (High-Level Architecture)](#key-value-data-store-high-level-architecture)
+- [SQL vs. NoSQL Databases](#146-sql-vs-nosql-databases)
+- [How Database Stores Data](#how-database-stores-data)
+- [Database and Data Storage](#database-and-data-storage)
+- [Microservice Architecture and System Design](#microservice-architecture-and-system-design)
+- [Redis Cache Patterns](#redis-cache-patterns)
+- [Exception Handling (Spring)](#exception-handling-1)
+- [Leadership and Agile Methodologies](#leadership-and-agile-methodologies)
+
+---
 
 # Java & System Design Interview Study Guide
 
@@ -477,6 +516,8 @@ Below is a summary of the most important design patterns, grouped by category, w
 
 ## Multithreading
 
+![alt text](static/thread.png)
+
 *   **Processes** do not share memory resources.
 *   **JVM Instance Architecture**:
     *   **Heap Memory**: Stores new objects and is **shared** among all threads within a JVM instance.
@@ -516,7 +557,7 @@ Below is a summary of the most important design patterns, grouped by category, w
 
 ## High-Level Design (HLD)
 
-### 14.1 Network Protocols
+## 14.1 Network Protocols
 
 **Application Layer (AL)**:
 *   **Client-side**: HTTP (Browsing), FTP (File Transfer), SMTP/IMAP (Email), WebSockets (Whatsapp).
@@ -604,7 +645,7 @@ Below is a summary of the most important design patterns, grouped by category, w
 *   **Consistency & Availability**: Design for **high availability**, which follows the **AP model** of the CAP theorem. This means there will be less consistency, but tunable consistency can be achieved using **quorum-based reads/writes (W+R > N)**.
 *   **Performance**: Use **caching for fast reads**.
 
-### 14.6 SQL vs. NoSQL Databases
+## 14.6 SQL vs. NoSQL Databases
 
 | Feature          | SQL (Relational Databases)             | NoSQL (Non-relational Databases)                 |
 | :--------------- | :------------------------------------- | :----------------------------------------------- |
@@ -665,7 +706,7 @@ Here are study notes generated from the provided sources:
         *   **Delete Anomaly**: Deleting specific data (e.g., order details) might unintentionally delete other related, important data.
         *   **Update Anomaly**: Updating a piece of data (e.g., product price) might require changes in many places, leading to inconsistencies if not all instances are updated.
 
-### **Microservice Architecture and System Design**
+## **Microservice Architecture and System Design**
 
 *   **API Gateway**:
     *   Acts as a **central entry point** for client requests in a microservice architecture.
@@ -704,7 +745,7 @@ Here are study notes generated from the provided sources:
         *   LBs distribute requests to **Microservices** (e.g., Microservice 1, Microservice 2) within an **Availability Zone (AZ1)** in **Region 1**.
         *   The architecture also includes another **Availability Zone (AZ2)** in Region 1 and **Region 2**, indicating disaster recovery or multi-region deployment.
 
-### **Redis Cache Patterns**
+## **Redis Cache Patterns**
 
 *   **1) Cache Aside**:
     *   **Process**: Application first checks the cache.
@@ -739,7 +780,7 @@ Here are study notes generated from the provided sources:
 *   **5) Write Back (or Write Behind)**:
     *   **Process**: Data is first written into the cache, and then **asynchronously** written into the DB using a queue.
 
-### **Design Patterns**
+## **Design Patterns**
 
 *   **Singleton Pattern**: Ensures that a class has only one instance and provides a global point of access to it.
     *   **1) Eager Initialization**:
@@ -757,7 +798,7 @@ Here are study notes generated from the provided sources:
 
 *   **Factory Pattern**: (Mentioned as a design pattern, but no details are provided).
 
-### **Exception Handling**
+## **Exception Handling**
 
 *   **Exception Handling Flow**:
     *   When **Any Exception** occurs, it goes to the **Exception Handler Resolver**.
@@ -773,7 +814,7 @@ Here are study notes generated from the provided sources:
     *   **2) Priority: Globally**:
         *   Handled using `@ControllerAdvice` annotation on a public class (e.g., `Controller Exception`), with `@ExceptionHandler(Custom_Java.class)` on a private method inside that class.
 
-### **Leadership and Agile Methodologies**
+## **Leadership and Agile Methodologies**
 
 *   **Leadership Aspects**:
     *   Tough decisions.
