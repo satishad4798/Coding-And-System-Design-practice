@@ -69,15 +69,15 @@ public class DataSaver {
 
 ✅ **Better Design (OCP Applied)**:
 ```java
-interface Database {
+interface DbSave {
     void save(String data);
 }
 
-class MySQLDatabase implements Database {
+class MySQLDatabase implements DbSave {
     public void save(String data) { /* Save to MySQL */ }
 }
 
-class MongoDBDatabase implements Database {
+class MongoDBDatabase implements DbSave {
     public void save(String data) { /* Save to MongoDB */ }
 }
 
@@ -174,42 +174,7 @@ class ElectricScooter extends Vehicle {
 
 ### 👔 Interview-style Example:
 
-🛑 **Bad interface**:
-```java
-interface Worker {
-    void work();
-    void eat();
-}
-```
 
-🛑 **Class Violation**:
-```java
-class Robot implements Worker {
-    public void work() { ... }
-    public void eat() {
-        throw new UnsupportedOperationException();
-    }
-}
-```
-
-✅ **Better: Separate interfaces**
-```java
-interface Workable {
-    void work();
-}
-interface Eatable {
-    void eat();
-}
-
-class Human implements Workable, Eatable {
-    public void work() { ... }
-    public void eat() { ... }
-}
-
-class Robot implements Workable {
-    public void work() { ... }
-}
-```
 
 🛑 **Bad: Forcing all employees to implement all methods**
 ```java
@@ -266,40 +231,6 @@ class ISPChef implements Cook {
 
 ### 👔 Interview-style Example:
 
-🛑 **Bad (Database Example)**:
-```java
-class MySQLDatabase {
-    void save(String data) { ... }
-}
-
-class ReportService {
-    MySQLDatabase db = new MySQLDatabase();
-    void generateReport(String data) {
-        db.save(data);  // Tightly coupled
-    }
-}
-```
-
-✅ **Better (using abstraction)**:
-```java
-interface Database {
-    void save(String data);
-}
-
-class MySQLDatabase implements Database {
-    public void save(String data) { ... }
-}
-
-class ReportService {
-    private Database db;
-    public ReportService(Database db) {
-        this.db = db;
-    }
-    public void generateReport(String data) {
-        db.save(data);  // Uses abstraction
-    }
-}
-```
 
 🛑 **Bad (Keyboard/Mouse Example)**:
 ```java
