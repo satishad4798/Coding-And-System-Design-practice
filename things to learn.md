@@ -1,3 +1,41 @@
+1. Master Core Java and Data Structures
+Key Concepts:
+- Java 17+ Features (Records, Sealed Classes, Virtual Threads, Pattern Matching)
+- Collections Framework (List, Set, Map, Queue)
+- Multithreading & Concurrency (Executors, CompletableFuture, Locks, Fork/Join Framework)
+- Memory Management (Garbage Collection, JVM Tuning)
+
+
+2. Strong Understanding of Spring Boot
+Key Topics:
+- Dependency Injection, AOP, Profiles
+- Spring Boot Starters, Actuator
+- RESTful APIs, Exception Handling, Validation
+- Spring Security (OAuth2, JWT, RBAC)
+- Spring Data JPA & Transactions
+
+
+3. System Design & Scalability
+Topics to Cover:
+- Monolithic vs Microservices Architecture
+- Database Scaling (Sharding, Replication, Caching)
+- API Gateway, Load Balancing
+- Message Queues (Kafka, RabbitMQ)
+- Distributed Systems & CAP Theorem
+
+4. SQL & NoSQL Databases
+Key Concepts:
+- ACID vs BASE Transactions
+- Indexing, Query Optimization
+- ORM vs Native Queries
+- NoSQL Types (Key-Value, Document, Column-Family, Graph)
+
+7. Behavioral and Soft Skills
+Common Questions:
+- "Tell me about a time you faced a technical challenge and how you solved it."
+- "How do you handle tight deadlines and pressure?"
+- "Describe a situation where you mentored a junior developer."
+
 
 # revise design patterns. 
 # revise solid principles.
@@ -14,10 +52,6 @@
 
 
 # lld pratice few problems.
-
-
-
-
 
 - [CAP Theorem](#cap-theorem)
 - [Scaling a System (From Zero to Million)](#scaling-a-system-from-zero-to-million)
