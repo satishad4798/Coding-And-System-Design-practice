@@ -39,9 +39,9 @@ fruits.stream().filter(fruit -> fruit.startsWith("B")).collect(Collectors.toList
 
 ```java
 
-List<Student> sds = names.stream().sorted((a, b) -> a.age - b.age).collect(Collectors.toList());
+List<coding.Student> sds = names.stream().sorted((a, b) -> a.age - b.age).collect(Collectors.toList());
 
-List<Student> sds = names.stream().sorted((a, b) -> {
+List<coding.Student> sds = names.stream().sorted((a, b) -> {
             int diff = a.age - b.age;
             if (diff > 0) {
                 return a.marks - b.marks;

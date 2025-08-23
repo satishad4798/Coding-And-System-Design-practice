@@ -20,7 +20,7 @@ comments. These databases are optimized to support high volumes of read operatio
 API Design
 GET /videos - Retrieves a list of videos.
 POST /videos - Uploads a new video.
-GET /videos/{videoId}/play - Streams a video.
+GET /videos/{videoId}/play - coding.StreamsExampleUsage a video.
 POST /users/{userId}/history - Updates user's viewing history.
 
 ![alt text](../../static/HLD/netflix2.png)
