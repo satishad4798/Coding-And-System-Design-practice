@@ -18,10 +18,10 @@ public class Store {
         Observer o3 = new SmsObserverImpl("99023", iphoneObservable);
         Observer o4 = new SmsObserverImpl("3434", iphoneObservable);
 
-        iphoneObservable.add(o1);
-        iphoneObservable.add(o2);
-        iphoneObservable.add(o3);
-        iphoneObservable.add(o4);
+        iphoneObservable.subscribe(o1);
+        iphoneObservable.subscribe(o2);
+        iphoneObservable.subscribe(o3);
+        iphoneObservable.subscribe(o4);
 
         iphoneObservable.setStockCount(12);
         iphoneObservable.setStockCount(-5);

@@ -12,13 +12,13 @@ public class MacObservableImpl implements Observable {
     List<Observer> observerList = new ArrayList<>();
 
     @Override
-    public void add(Observer observer) {
+    public void subscribe(Observer observer) {
         observerList.add(observer);
 
     }
 
     @Override
-    public void remove(Observer observer) {
+    public void unsubscribe(Observer observer) {
         observerList.add(observer);
     }
 

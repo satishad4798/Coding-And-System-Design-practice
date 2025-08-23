@@ -5,22 +5,19 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.PriorityQueue;
 
-class Solution {
+class TopKFrequent {
     public int[] topKFrequent(int[] nums, int k) {
 
         HashMap<Integer, Integer> map = new HashMap<>();
-
-        for (int n : nums) {
-            map.put(n, map.getOrDefault(n, 0) + 1);
+        for (int num : nums) {
+            map.put(num, map.getOrDefault(num, 0) + 1);
         }
-
-
         //min heap
         PriorityQueue<Map.Entry<Integer, Integer>> pq = new PriorityQueue<>(Comparator.comparing(Map.Entry::getValue));
-
-//        PriorityQueue<Map.Entry<Integer, Integer>> pq2 = new PriorityQueue<>((p, q) -> {
-//            return p.getValue().compareTo(q.getValue());
-//        });
+        //        PriorityQueue<Map.Entry<Integer, Integer>> pq2 = new PriorityQueue<>((p, q) -> {
+        //            return p.getValue().compareTo(q.getValue());
+        //        });
+        
 
         for (Map.Entry<Integer, Integer> i : map.entrySet()) {
             if (pq.size() >= k) {
@@ -29,18 +26,11 @@ class Solution {
             pq.offer(i);
         }
 
-        PriorityQueue<Map.Entry<Integer, Integer>> pq2 = new PriorityQueue<>((p, q) -> {
-            return p.getValue().compareTo(q.getValue());
-        });
-
-        pq2.addAll(pq);
-
         int[] result = new int[k];
-        for (int i = 0; i < k; i++) {
-            result[i] = pq2.poll().getKey();
+        for (int i = k - 1; i >= 0; i++) {
+            result[i] = pq.poll().getKey();
         }
         return result;
     }
-
 
 }

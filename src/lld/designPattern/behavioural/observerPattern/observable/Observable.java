@@ -4,9 +4,9 @@ import lld.designPattern.behavioural.observerPattern.observer.Observer;
 
 public interface Observable {
 
-    void add(Observer observer);
+    void subscribe(Observer observer);
 
-    void remove(Observer observer);
+    void unsubscribe(Observer observer);
 
     void notifySubscriber();
 
