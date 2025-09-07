@@ -1,4 +1,21 @@
 
+# Stack
+ - if you need keep track of previous element.
+ - looking got next greater or smaller element.
+ - if you need keep track of minimum or maximum element.
+
+# Hashmap
+ - if you need to keep track of frequency of elements.
+ - if you need to check if an element exists or not in O(1) time.
+ - if you need to group elements based on some property.
+
+
+ # Priority Queue
+ - if you need to keep track of largest or smallest elements.
+ - you need top K elements.
+ - need to pull smallest or largest element at any point of time. ( where insertion and deletion happens frequently
+ c)
+
 # Approach To Solve
 - Given a problem here are some questions that should help you figure out the general direction of how to solve it
 

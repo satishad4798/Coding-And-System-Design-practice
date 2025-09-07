@@ -16,7 +16,22 @@ for(int i=0; i<rows; i++) {
 }
 ```
 
+# string to int 
+
+```java
+String str = "123";
+int num = Integer.parseInt(str); // Convert String to int
+```
+
+# convert ArrayList to int[]
+
+
+```java
+List<int[]> result = new ArrayList<>();
+   result.toArray(new int[result.size()][2]);
+``` 
 # Priority Queue
+
 
 ```java
 PriorityQueue<Integer> pq = new PriorityQueue<>();
@@ -203,9 +218,9 @@ fruits.stream().filter(fruit -> fruit.startsWith("B")).collect(Collectors.toList
 
 ```java
 
-List<Student> sds = names.stream().sorted((a, b) -> a.age - b.age).collect(Collectors.toList());
+List<coding.Student> sds = names.stream().sorted((a, b) -> a.age - b.age).collect(Collectors.toList());
 
-List<Student> sds = names.stream().sorted((a, b) -> {
+List<coding.Student> sds = names.stream().sorted((a, b) -> {
             int diff = a.age - b.age;
             if (diff > 0) {
                 return a.marks - b.marks;
