@@ -1,4 +1,4 @@
-# Java Code Snippets for SDE2 Interviews
+# Java Code Snippets for SDE Interviews
 
 ## Basic Operations
 
