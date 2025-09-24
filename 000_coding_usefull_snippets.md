@@ -135,19 +135,24 @@ List<Integer> flatList = set.stream()
     .collect(Collectors.toList());
 
 //without using ::
+set.stream()
+    .flatMap(list -> list.stream())
+    .collect(Collectors.toList());
+```
 
-Set<List<Integer>> set = new HashSet<>();
-List<Integer> list = new ArrayList<>();
-for (List<Integer> sublist : set) {
-    list.addAll(sublist);
-}
-
+```java
 
 // Alternative without streams
 List<Integer> flatList = new ArrayList<>();
 for (List<Integer> sublist : set) {
     flatList.addAll(sublist);
 }
+
+// convert Set<Integer> to List<Integer>
+List<Integer> list = new ArrayList<>(set);
+```
+
+```java
 
 // Convert Set<List<Integer>> to List<List<Integer>>
 List<List<Integer>> listOfLists = new ArrayList<>(set);
@@ -437,24 +442,3 @@ public void bfs(int start, Map<Integer, List<Integer>> graph) {
 | `Collections.unmodifiableList(List)` | Makes list read-only | `List<String> immutable = Collections.unmodifiableList(list)` |
 | `Collections.synchronizedList(List)` | Makes list thread-safe | `List<String> syncList = Collections.synchronizedList(list)` |
 
-## Testing and Debugging
-```java
-// JUnit 5 Test Template
-@Test
-void testFeature() {
-    // Arrange
-    Input input = new Input();
-    Expected expected = new Expected();
-    
-    // Act
-    Result result = subject.process(input);
-    
-    // Assert
-    assertEquals(expected, result);
-}
-
-// Debug Utility
-public static void debug(Object... args) {
-    System.err.println(Arrays.deepToString(args));
-}
-```
