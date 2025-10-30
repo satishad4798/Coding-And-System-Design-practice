@@ -4,8 +4,8 @@
 
 # Basics
 
-- **class** : blueprint for creating objects.
-- **object** : instance of a class.
+- **Class** : blueprint for creating objects.
+- **Object** : instance of a class.
 - **Interface** :  contract for classes to follow.
     - Defines a contract that implementing classes must follow.
     - Cannot have instance variables (only public static final constants).
