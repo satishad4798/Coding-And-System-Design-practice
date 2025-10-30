@@ -1,17 +1,43 @@
-# LLD
+# LLD for Interview
 
-## Decorator design pattern
+# Basics
 
-- Read here :  https://refactoring.guru/design-patterns/decorator.
+- **class** : blueprint for creating objects.
+- **object** : instance of a class.
+- **Interface** :  contract for classes to follow.
+    - Defines a contract that implementing classes must follow.
+    - Cannot have instance variables (only public static final constants).
+    - All methods are implicitly public and abstract (unless they have a default or static implementation).
+    - Supports multiple inheritance, unlike classes
 
-- example : coffee machine, custom ice cream , pizza shop, layering of clothes.
+# UML 
+![alt text](../../static/LLD/uml.png)
 
-![alt text](../../static/LLD/realworld.png)
+# SOLID Principles
+[ SOLID Principles](1_SOLID_Principles_CheatSheet.md)
 
-![alt text](../../static/LLD/decorator_template.png)
+# Design Patterns 
 
-![alt text](../../static/LLD/icecream_decorator.png)
+| Creational         | Structural | Behavioral              |
+| :----------------- | :--------- | :---------------------- |
+| **Singleton**      | **Adapter**    | **Strategy**            |
+| **Factory Method** | **Decorator**  | **Observer**            |
+| Abstract Factory   | Proxy      | Command                 |
+| **Builder**        | **Facade**     | State                   |
+| Prototype          | Composite  | Template Method         |
+|                    | Flyweight  | **Chain of Responsibility** |
 
-![alt text](../../static/LLD/pizza.png)
+[ Design patterns ](2_Design_Pattern.md)
 
-#     
+# How to approach LLD Interview
+[ How to approach LLD Interview](3_LLD_how_to_approach_interview.md)
+
+# LLD Asked Questions
+[ LLD Asked Questions](5_LLD_and_HLD_asked_questions.md)
+
+# LLD question to try
+[ LLD question to try](4_LLD_questions_to_try.md)
+
+
+
+

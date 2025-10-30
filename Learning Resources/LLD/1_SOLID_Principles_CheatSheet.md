@@ -1,3 +1,6 @@
+> TO MAIN PAGE  - [ Back to main page ](README.md)
+
+
 # SOLID Principles - Interview Cheat Sheet with Examples
 
 | Principle | Meaning                                 | Example                                  |

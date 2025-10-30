@@ -4,19 +4,19 @@ import lld.designPattern.structural.decorators.Pizza;
 
 public abstract class PizzaToppingDecorator implements Pizza {
 
-    Pizza pizza;
+    Pizza currentPizza;
 
-    public PizzaToppingDecorator(Pizza pizza) {
-        this.pizza = pizza;
+    public PizzaToppingDecorator(Pizza currentPizza) {
+        this.currentPizza = currentPizza;
     }
 
     @Override
     public int getCost() {
-        return pizza.getCost();
+        return currentPizza.getCost();
     }
 
     @Override
     public String getDescription() {
-        return pizza.getDescription();
+        return currentPizza.getDescription();
     }
 }

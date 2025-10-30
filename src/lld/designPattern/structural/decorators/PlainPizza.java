@@ -3,7 +3,7 @@ package lld.designPattern.structural.decorators;
 public class PlainPizza implements Pizza {
     @Override
     public String getDescription() {
-        return " plain pizza ";
+        return " plain currentPizza ";
     }
 
     @Override

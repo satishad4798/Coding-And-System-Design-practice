@@ -1,3 +1,5 @@
+> TO MAIN PAGE  - [ Back to main page ](README.md)
+
 # Summary from Shrayansh Jain  :
 
 -  All Behavioral Patterns  : https://notebook.zohopublic.in/public/notes/bietvc07e6ecf28d7409286145c16e623f9ed
@@ -38,6 +40,19 @@
 - [Visitor](#visitor-pattern)
 
 
+# Decorator design pattern
+
+- Read here :  https://refactoring.guru/design-patterns/decorator.
+
+- example : coffee machine, custom ice cream , pizza shop, layering of clothes.
+
+![alt text](../../static/LLD/realworld.png)
+
+![alt text](../../static/LLD/decorator_template.png)
+
+![alt text](../../static/LLD/icecream_decorator.png)
+
+![alt text](../../static/LLD/pizza.png)
 
 
 
