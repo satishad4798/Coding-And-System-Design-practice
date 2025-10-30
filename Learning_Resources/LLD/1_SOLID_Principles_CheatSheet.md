@@ -309,5 +309,6 @@ class Macbook {
 - **Testability**: Facilitates unit testing by allowing mocking of dependencies.
 - **Flexibility**: Code can adapt to changes without significant rewrites.  
 
----
+--------------------------------------------------------------------
 
+> TO MAIN PAGE  - [ Back to main page ](README.md)

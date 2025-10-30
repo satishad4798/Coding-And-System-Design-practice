@@ -1449,3 +1449,7 @@ class Fruit implements Element {
 | When to use? | When you need to perform operations on object structures |
 | Real-world usage? | Compilers, ASTs, reporting systems |
 
+
+--------------------------------------------------------------------
+
+> TO MAIN PAGE  - [ Back to main page ](README.md)

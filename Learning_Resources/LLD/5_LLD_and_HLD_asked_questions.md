@@ -170,3 +170,7 @@ What tables/columns would you create?
 
 
 How do you store parent-child relations?
+
+--------------------------------------------------------------------
+
+> TO MAIN PAGE  - [ Back to main page ](README.md)
