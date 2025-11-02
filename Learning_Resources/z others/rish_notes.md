@@ -454,39 +454,6 @@ suitable for interview preparation.
 
 ## Design Patterns
 
-## Design Patterns: Summary Table
-
-Below is a summary of the most important design patterns, grouped by category, with a one-line description and a
-real-world analogy for each. Use this as a quick reference before interviews.
-
-| Pattern Group  | Pattern Name            | Purpose/Intent                                      | Real-World Analogy                                  |
-|----------------|-------------------------|-----------------------------------------------------|-----------------------------------------------------|
-| **Creational** | Singleton               | Only one instance per JVM                           | President of a country (only one at a time)         |
-|                | Factory                 | Create objects without exposing instantiation logic | Car factory producing different car models          |
-|                | Abstract Factory        | Create families of related objects                  | Furniture set factory (modern/classic sets)         |
-|                | Builder                 | Step-by-step construction of complex objects        | Restaurant meal builder (choose starter, main, etc) |
-|                | Prototype               | Clone objects instead of creating new ones          | Photocopying a document                             |
-| **Structural** | Adapter                 | Make incompatible interfaces work together          | Power plug adapter (US to EU plug)                  |
-|                | Decorator               | Add new behavior to objects dynamically             | Adding toppings to a pizza                          |
-|                | Proxy                   | Control access to another object                    | Security guard controlling building access          |
-|                | Facade                  | Simplify interface to a complex subsystem           | Universal remote controlling multiple devices       |
-|                | Composite               | Treat individual and composite objects uniformly    | Folder structure (folders and files)                |
-|                | Bridge                  | Decouple abstraction from implementation            | TV remote (remote and TV are independent)           |
-|                | Flyweight               | Share objects to save memory                        | Shared bike system in a city                        |
-| **Behavioral** | Observer                | Notify dependents of state changes                  | News agency and subscribers                         |
-|                | Strategy                | Select algorithm at runtime                         | Payment method selection (card, cash, UPI)          |
-|                | Command                 | Encapsulate a request as an object                  | Restaurant order slip given to chef                 |
-|                | Template Method         | Skeleton of algorithm, steps deferred to subclasses | Coffee machine (fixed steps, some customizable)     |
-|                | State                   | Change behavior when internal state changes         | Traffic light changing states                       |
-|                | Chain of Responsibility | Pass request along a chain of handlers              | Customer support escalation                         |
-|                | Iterator                | Sequentially access elements of a collection        | TV remote channel surfing                           |
-|                | Mediator                | Coordinate interaction between objects              | Air traffic controller                              |
-|                | Memento                 | Capture and restore object state                    | Undo feature in text editors                        |
-|                | Visitor                 | Separate algorithm from object structure            | Tax auditor visiting different businesses           |
-|                | Interpreter             | Implement grammar for interpreting sentences        | Calculator parsing and evaluating expressions       |
-
----
-
 ## Custom Annotations
 
 * `@Target`: Specifies where an annotation can be used (e.g., `ElementType.TYPE` for classes or interfaces).

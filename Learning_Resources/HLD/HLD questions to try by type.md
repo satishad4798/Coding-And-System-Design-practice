@@ -1,13 +1,3 @@
-# mine TODO pending
-
-- implement hashmap ( patial done)
-- implment elevator
-- implment parking lot.
-
-
-
-# other
-
 ► Read-Heavy Systems 
 These focus on scale, latency, and efficient data fetching. 
 1. Design a URL Shortener (Bitly) 

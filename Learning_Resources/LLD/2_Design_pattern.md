@@ -10,49 +10,49 @@
 
 ## 📚 Table of Contents
 
+## Table of Contents
+
 ### 1. [Creational Patterns](#creational-patterns)
-- [Singleton](#singleton-pattern)
-- [Factory / Factory Method](#factory-pattern)
-- [Abstract Factory](#abstract-factory-pattern)
-- [Builder](#builder-pattern)
-- [Prototype](#prototype-pattern)
+- Creational design patterns deal with object creation mechanisms, trying to create objects in a manner suitable to the situation.
+- Important ones to focus on:
+    - [Singleton Pattern](#design-pattern-singleton)
+    - [Factory Pattern](#factory-pattern--object-creation-without-exposing-logic)
+    - [Abstract Factory Pattern](#abstract-factory-pattern)
+    - [Builder Pattern](#builder-pattern)
+- Others:
+    - [Prototype Pattern](#prototype-pattern--clone-existing-objects-instead-of-building-anew)
+
 
 ### 2. [Structural Patterns](#structural-patterns)
-- [Adapter](#adapter-pattern)
-- [Bridge](#bridge-pattern)
-- [Composite](#composite-pattern)
-- [Decorator](#decorator-pattern)
-- [Facade](#facade-pattern)
-- [Flyweight](#flyweight-pattern)
-- [Proxy](#proxy-pattern)
+- Structural design pattern is a way to `combine or arrange classes` and objects to form `bigger structures` while keeping them flexible and efficient.
 
-### 3. [Behavioral Patterns](#behavioral-patterns)
-- [Chain of Responsibility](#chain-of-responsibility-pattern)
-- [Command](#command-pattern)
-- [Interpreter](#interpreter-pattern)
-- [Iterator](#iterator-pattern)
-- [Mediator](#mediator-pattern)
-- [Memento](#memento-pattern)
-- [Observer](#observer-pattern)
-- [State](#state-pattern)
-- [Strategy](#strategy-pattern)
-- [Template Method](#template-method-pattern)
-- [Visitor](#visitor-pattern)
+- Important ones to focus on:
+    - [Decorator Pattern](#decorator-pattern)
+    - [Proxy Pattern](#proxy-pattern)
+- Others:
+    - [Adapter Pattern](#adapter-pattern)
+    - [Bridge Pattern](#bridge-pattern)
+    - [Composite Pattern](#composite-pattern)
+    - [Facade Pattern](#facade-pattern)
+    - [Flyweight Pattern](#flyweight-pattern)
+
+### 3. [Behavioral Patterns](#behavioral-patterns-continued)
+- Important ones to focus on:
+    - [Strategy Pattern](#strategy-pattern)
+    - [Observer Pattern](#observer-pattern)
+    - [Chain of Responsibility Pattern](#%EF%B8%8F-chain-of-responsibility-pattern)
+- Others:    
+    - [Command Pattern](#command-pattern)
+    - [Interpreter Pattern](#interpreter-pattern)
+    - [Iterator Pattern](#iterator-pattern)
+    - [Mediator Pattern](#mediator-pattern)
+    - [Memento Pattern](#memento-pattern)
+    - [State Pattern](#state-pattern)
+    - [Template Method Pattern](#template-method-pattern)
+    - [Visitor Pattern](#visitor-pattern)
 
 
-# Decorator design pattern
 
-- Read here :  https://refactoring.guru/design-patterns/decorator.
-
-- example : coffee machine, custom ice cream , pizza shop, layering of clothes.
-
-![alt text](../../static/LLD/realworld.png)
-
-![alt text](../../static/LLD/decorator_template.png)
-
-![alt text](../../static/LLD/icecream_decorator.png)
-
-![alt text](../../static/LLD/pizza.png)
 
 
 
@@ -244,7 +244,7 @@ public class Main {
 
 ---
 
-# 🏭 Factory Pattern — Object Creation Without Exposing Logic
+## 🏭 Factory Pattern — Object Creation Without Exposing Logic
 
 ## ✅ Intent
 Define an interface for creating an object, but let subclasses decide which class to instantiate.
@@ -342,7 +342,7 @@ public class Main {
 
 ---
 
-# 🏭 Abstract Factory Pattern
+## 🏭 Abstract Factory Pattern
 
 ## ✅ Intent
 Provide an interface for creating families of related or dependent objects without specifying their concrete classes.
@@ -516,7 +516,7 @@ public class Application {
 
 ---
 
-# 🏗️ Builder Pattern
+## 🏗️ Builder Pattern
 
 **Intent:**
 Separate the construction of a complex object from its representation so the same construction process can create different representations.
@@ -639,7 +639,7 @@ Satish | satish@example.com | 30 | Bangalore
 
 ---
 
-# 🧬 Prototype Pattern — Clone Existing Objects Instead of Building Anew
+## 🧬 Prototype Pattern — Clone Existing Objects Instead of Building Anew
 
 ## ✅ Intent
 Create new objects by copying an existing object (prototype), instead of creating from scratch. This is useful when object creation is costly or needs to preserve configuration.
@@ -777,8 +777,13 @@ public Document clone() {
 ## 🎭 Decorator Pattern
 
 ### ✅ Intent
-Add new behaviors to objects dynamically by placing them inside wrapper objects that contain the behaviors.
+- Add new behaviors to objects dynamically by placing them inside wrapper objects that contain the behaviors.
 
+- Decorator is a structural design pattern that lets you `attach new behaviors` to objects `by placing` these objects `inside special wrapper objects` that contain the behaviors.
+
+- `add new functionality to an object` `dynamically without altering its structure`.
+
+- example : coffee machine, custom ice cream , pizza shop, layering of clothes.
 ### 💡 Real-Life Analogy
 Think of customizing a coffee order:
 - Start with basic coffee
@@ -787,166 +792,21 @@ Think of customizing a coffee order:
 - Add whipped cream (decorator)
 Each addition wraps the previous one and adds its own behavior.
 
-### 🎯 SDE-2 Interview Scenario: Data Stream Processing
 
-#### 📦 Step 1: Component Interface
-```java
-public interface DataSource {
-    void writeData(String data);
-    String readData();
-}
-```
+![alt text](../../static/LLD/realworld.png)
 
-#### 🎁 Step 2: Concrete Component
-```java
-public class FileDataSource implements DataSource {
-    private String filename;
+![alt text](../../static/LLD/decorator_template.png)
 
-    public FileDataSource(String filename) {
-        this.filename = filename;
-    }
+![alt text](../../static/LLD/icecream_decorator.png)
 
-    @Override
-    public void writeData(String data) {
-        System.out.println("Writing data to file: " + data);
-    }
+![alt text](../../static/LLD/pizza.png)
 
-    @Override
-    public String readData() {
-        return "Data from file";
-    }
-}
-```
-
-#### 🎨 Step 3: Base Decorator
-```java
-public class DataSourceDecorator implements DataSource {
-    private DataSource wrappee;
-
-    public DataSourceDecorator(DataSource source) {
-        this.wrappee = source;
-    }
-
-    @Override
-    public void writeData(String data) {
-        wrappee.writeData(data);
-    }
-
-    @Override
-    public String readData() {
-        return wrappee.readData();
-    }
-}
-```
-
-#### 🔒 Step 4: Concrete Decorators
-```java
-public class EncryptionDecorator extends DataSourceDecorator {
-    public EncryptionDecorator(DataSource source) {
-        super(source);
-    }
-
-    @Override
-    public void writeData(String data) {
-        String encrypted = encrypt(data);
-        super.writeData(encrypted);
-    }
-
-    @Override
-    public String readData() {
-        String data = super.readData();
-        return decrypt(data);
-    }
-
-    private String encrypt(String data) {
-        // Encryption logic
-        return "ENCRYPTED(" + data + ")";
-    }
-
-    private String decrypt(String data) {
-        // Decryption logic
-        return data.replace("ENCRYPTED(", "").replace(")", "");
-    }
-}
-
-public class CompressionDecorator extends DataSourceDecorator {
-    public CompressionDecorator(DataSource source) {
-        super(source);
-    }
-
-    @Override
-    public void writeData(String data) {
-        String compressed = compress(data);
-        super.writeData(compressed);
-    }
-
-    @Override
-    public String readData() {
-        String data = super.readData();
-        return decompress(data);
-    }
-
-    private String compress(String data) {
-        // Compression logic
-        return "COMPRESSED(" + data + ")";
-    }
-
-    private String decompress(String data) {
-        // Decompression logic
-        return data.replace("COMPRESSED(", "").replace(")", "");
-    }
-}
-```
-
-#### 🚀 Step 5: Usage
-```java
-public class Main {
-    public static void main(String[] args) {
-        // Simple data writing
-        DataSource source = new FileDataSource("test.txt");
-        source.writeData("Hello World");
-
-        // Encrypted data writing
-        DataSource encrypted = new EncryptionDecorator(source);
-        encrypted.writeData("Hello World"); // Will be encrypted
-
-        // Compressed and encrypted data writing
-        DataSource compressedEncrypted = new CompressionDecorator(
-            new EncryptionDecorator(source)
-        );
-        compressedEncrypted.writeData("Hello World"); // Will be compressed and encrypted
-    }
-}
-```
-
-### 🎤 What to Say in an Interview
-> "I used the Decorator pattern in our data processing pipeline where we needed to add various transformations like encryption, compression, and logging. The pattern allowed us to combine these behaviors flexibly without creating a class explosion from inheritance. It was especially useful for handling different client requirements where each needed different combinations of data processing."
 
 ### 🔍 SDE-2 Level Interview Questions
 
 | Question | Answer |
 |----------|---------|
 | How does Decorator differ from Inheritance? | Decorator provides flexible runtime behavior composition vs static inheritance |
-| Thread safety considerations? | Decorators should be stateless or properly synchronized; Consider using ThreadLocal for state |
-| Performance implications? | Minor overhead from delegation; Use builder pattern for complex decoration chains |
-| How to handle decorator order? | Create factory methods for common combinations; Document required ordering |
-| Real-world examples? | Java I/O (BufferedReader, FileInputStream), UI Components, Middleware in web frameworks |
-
-### 💡 Pro Tips for SDE-2 Interviews
-1. Mention how it supports the Single Responsibility Principle
-2. Discuss its use in cross-cutting concerns (logging, transactions, caching)
-3. Explain how it helps avoid class explosion from multiple feature combinations
-4. Share how it enables A/B testing of different feature combinations
-
-### ✅ Design Considerations for Scale
-
-| Aspect | Consideration |
-|--------|---------------|
-| Maintainability | Each decorator is isolated and focused |
-| Flexibility | Easy to add/remove behaviors at runtime |
-| Debugging | Can be challenging to debug deep decoration chains |
-| Testing | Easy to mock and test each decorator separately |
-| Performance | Monitor decoration depth in performance-critical paths |
 
 ---
 
@@ -1166,7 +1026,18 @@ class ProxyService implements Service {
 
 ---
 
-# 🧠 Behavioral Patterns (continued)
+# 🧠 Behavioral Patterns 
+
+## Observer Pattern
+### ✅ Intent
+Define a one-to-many dependency between objects so that when one object changes state, all its dependents are notified and updated automatically.
+
+### 💡 Real-Life Analog
+- News agency and subscribers: When news is published, all subscribers get notified.
+- YouTube channel and subscribers: When a new video is uploaded, all subscribers are notified.
+
+
+
 
 ## ⛓️ Chain of Responsibility Pattern
 ### ✅ Intent

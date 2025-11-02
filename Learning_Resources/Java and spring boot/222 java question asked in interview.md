@@ -1,6 +1,30 @@
 # 📌 Master SDE-2 Java + Spring Boot Interview Tracker
 
 ------------------------------------------------------------------------
+## 3. Common Interview Q&A
+
+- **Why is HashMap faster than TreeMap?**
+  - HashMap: O(1) average, TreeMap: O(log n).  
+  - Use TreeMap only when sorting required.
+
+- **If you need sorted keys, which map?**
+  - TreeMap.
+
+- **If you want insertion order preserved?**
+  - LinkedHashMap.
+
+- **Implement LRU Cache:**
+  - Extend LinkedHashMap with `accessOrder=true` and override `removeEldestEntry()`.
+
+- **Why ConcurrentHashMap doesn’t allow null keys/values?**
+  - To avoid ambiguity in concurrent reads (`null` → absent or present?).
+
+- **WeakHashMap vs HashMap:**
+  - WeakHashMap removes entries when key is GC’d → good for caches.
+
+- **When to use IdentityHashMap?**
+  - When key equality is based on reference (`==`) not logical equality.
+
 
 ## **1. Core Collections & Hashing**
 
@@ -13,7 +37,10 @@
 6.  ❌ Methods available on **Collections** class\
 7.  ❌ Converting **Map** to **List** (keys, values, entries)\
 8.  ❌ Thread-safe collections and their use cases\
-9.  ❌ **Fail-fast** vs **Fail-safe** collections
+9.  ❌ **Fail-fast** vs **Fail-safe** collections\
+10. ❌ Explain difference between **HashMap**, **LinkedHashMap** and **TreeMap**\
+11. ❌ How do you handle thread safety in Java Collections?\
+12. ❌ Explain immutability in Java and how to create immutable classes
 
 ------------------------------------------------------------------------
 
@@ -38,7 +65,9 @@
 21. ✅ **Virtual Threads** -- what, why, and when to use\
 22. ✅ Multithreading in Spring Boot -- examples and implementations\
 23. ✅ Custom thread pool in Spring Boot\
-24. ✅ Refresh on threads (theory, syntax, examples)
+24. ✅ Refresh on threads (theory, syntax, examples)\
+25. ❌ How do you implement Producer–Consumer in Java?\
+26. ❌ Explain difference between **ExecutorService**, **ForkJoinPool** and **CompletableFuture**
 
 ------------------------------------------------------------------------
 
@@ -74,7 +103,12 @@
 42. ❌ Load testing tools (Apache Bench, JMeter)\
 43. ❌ Spring Boot annotations and their use cases\
 44. ❌ Security headers for microservices\
-45. ❌ Secret management (Vault, K8s secrets)
+45. ❌ Secret management (Vault, K8s secrets)\
+46. ❌ Difference between **@Controller**, **@RestController** and **@ControllerAdvice**\
+47. ❌ How do you implement global exception handling in Spring Boot?\
+48. ❌ How do you configure multiple data sources in Spring Boot?\
+49. ❌ How to secure REST APIs using JWT or OAuth2?\
+50. ❌ How do you implement caching in Spring Boot (Redis / Caffeine)?
 
 ------------------------------------------------------------------------
 
@@ -85,7 +119,12 @@
 48. ❌ Handling fresh events after downtime\
 49. ❌ Kafka event retention and unread events\
 50. ❌ WebSocket usage in HLD -- benefits and drawbacks\
-51. ❌ Scaling WebSocket connections for chat applications
+51. ❌ Scaling WebSocket connections for chat applications\
+52. ❌ Difference between synchronous and asynchronous communication\
+53. ❌ How do you implement service discovery?\
+54. ❌ Explain message brokers (Kafka/RabbitMQ) in microservices\
+55. ❌ How do you design a fault-tolerant API Gateway?\
+56. ❌ Explain circuit breaker and retry patterns
 
 ------------------------------------------------------------------------
 
@@ -95,7 +134,12 @@
 53. ❌ N+1 query problem and solutions\
 54. ❌ Database encryption and security\
 55. ❌ Avoiding DB-level circular dependencies\
-56. ❌ Hibernate relationships between tables
+56. ❌ Hibernate relationships between tables\
+57. ❌ Difference between **save()**, **persist()**, and **merge()**\
+58. ❌ Explain lazy loading vs eager loading\
+59. ❌ How do you implement batch inserts/updates in Hibernate?\
+60. ❌ Explain **@OneToOne**, **@OneToMany**, and **@ManyToMany** mappings\
+61. ❌ What are entity states in Hibernate?
 
 ------------------------------------------------------------------------
 
@@ -117,6 +161,21 @@
 65. ❌ Triplet sum problem\
 66. ❌ Converting stream to linked list\
 67. ❌ Kth largest element in an array\
-68. ❌ IP address validation implementation
+68. ❌ IP address validation implementation\
+69. ❌ Group patients by insurance plan and count them\
+70. ❌ Find duplicate records in a large data stream\
+71. ❌ Implement REST endpoint for last 10 activities\
+72. ❌ Design healthcare alerts system for millions of users\
+73. ❌ Implement thread-safe cache with expiration policy
+
+------------------------------------------------------------------------
+
+## **11. Cloud & DevOps**
+
+74. ❌ Deploy Spring Boot microservices to cloud platforms\
+75. ❌ Explain CI/CD pipeline steps\
+76. ❌ Secure secrets and environment variables in cloud\
+77. ❌ Explain vertical vs horizontal scaling\
+78. ❌ Monitor and trace microservices in production
 
 ------------------------------------------------------------------------
