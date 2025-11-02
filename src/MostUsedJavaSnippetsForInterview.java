@@ -50,12 +50,9 @@ public class MostUsedJavaSnippetsForInterview {
 
         // Initialize from list
         List<Integer> list = Arrays.asList(3, 1, 4, 1, 5);
+        //heapify a list
         PriorityQueue<Integer> pq2 = new PriorityQueue<>(list);
 
-        //heapify a list
-        List<Integer> list = Arrays.asList(3, 1, 4, 1, 5);
-        PriorityQueue<Integer> pq = new PriorityQueue<>(list);
-            
 
     }
 
@@ -64,9 +61,9 @@ public class MostUsedJavaSnippetsForInterview {
         //Array
 
 
-// Populate 2D array
-        int[][] dp = new int[rows][cols];
-        for (int i = 0; i < rows; i++) {
+        // Populate 2D array
+        int[][] dp = new int[2][3];
+        for (int i = 0; i < dp.length; i++) {
             Arrays.fill(dp[i], -1);                   // Fill each row with -1
         }
 
@@ -118,32 +115,32 @@ public class MostUsedJavaSnippetsForInterview {
         //access character
         char c = s.charAt(0); // Accessing the first character
 
-//iterate through each character in a string
+        //iterate through each character in a string
         String str = "Hello";
         for (char eachChar : str.toCharArray()) {
             System.out.println(eachChar); // Prints each character
         }
 
-// convert character array to string
+        // convert character array to string
         char[] charArray = {'H', 'e', 'l', 'l', 'o'};
-        String str = new String(charArray); // Convert char array to String
+        str = new String(charArray); // Convert char array to String
 
-// convert number in string format to int
+        // convert number in string format to int
         String str2 = "123";
         int num = Integer.parseInt(str2); // Convert String to int
 
-// convert int to string 
+        // convert int to string
         String strNum = String.valueOf(num); // Convert int to String
-//or 
-        String strNum = Integer.toString(num); // Convert int to String
+        //or
+        String strNum2 = Integer.toString(num); // Convert int to String
 
-//string builder
+        //string builder
         StringBuilder sb = new StringBuilder(str);      // Mutable string
 
 
-///////////////////////// other
-//sting methods
-        String str = "Hello";
+        ///////////////////////// other
+        //sting methods
+        str = "Hello";
         String upper = str.toUpperCase(); // Convert to uppercase
         String lower = str.toLowerCase(); // Convert to lowercase
         String trimmed = str.trim(); // Remove leading and trailing spaces
@@ -169,7 +166,7 @@ public class MostUsedJavaSnippetsForInterview {
         //or
         Deque<Integer> stack2 = new ArrayDeque<>();
         //or
-        
+
         stack.push(1);           // Add element
         stack.pop();            // Remove and return top element
         stack.peek();           // View top element without removing
