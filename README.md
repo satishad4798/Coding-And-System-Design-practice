@@ -1,5 +1,9 @@
 # System Design and Coding Interview Preparation
 
+## 💻 Coding
+- [useful code snippets](src/MostUsedJavaSnippetsForInterview.java)
+
+
 ## 📚 Low Level Design (LLD)
 0. [Home page](Learning_Resources/LLD/README.md)
 1. [SOLID Principles](Learning_Resources/LLD/1_SOLID_Principles_CheatSheet.md)
@@ -12,8 +16,6 @@
 ## 🏗️ High Level Design (HLD)
 - Coming soon...
 
-## 💻 Coding
-- Coming soon...
 
 ## ☕ Spring and Java
 - Coming soon...
