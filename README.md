@@ -35,18 +35,14 @@
 - [Question asked in interview](asked_in_Interview_coding_java)
 - [LLD questions asked in Interview](asked_in_interview_LLD_and_HLD)
 
-<a id="coding"></a>
 ## 3. 💻 Coding
+<a id="coding"></a>
 
-- [Home page](Learning_Resources/Coding/README.md)
-
+[Home page](Learning_Resources/Coding/README.md)
 - [Useful code snippets](src/MostUsedJavaSnippetsForInterview.java)
-
-- Code visualization
+- Code visualization (imp)
     - [Algo-lens](https://jaroslaw-weber.github.io/algo-lens/list/all)
-
 - 🗺️ Roadmaps & Sheets
-
     - Roadmaps grouped by data structure and algorithm
         - [NeetCode Question with Roadmap](https://neetcode.io/roadmap)
         - [Grind 75 questions](https://www.techinterviewhandbook.org/grind75/?mode=preferences&order=topics&grouping=topics)
@@ -56,15 +52,14 @@
     - Other roadmaps
         - [Striver's Roadmap](https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2)
 
-    - Master cheatsheet
+            - Master cheatsheet
         ![datatype.jpeg](static/coding/datatype.jpeg)
 
 
 ## 📚 Low Level Design (LLD)
 <a id="lld"></a>
-## 📚 Low Level Design (LLD)
 
-0. [Home page](Learning_Resources/LLD/README.md)
+ [Home page](Learning_Resources/LLD/README.md)
 1. [SOLID Principles](Learning_Resources/LLD/1_SOLID_Principles_CheatSheet.md)
 2. [Design Patterns](Learning_Resources/LLD/2_Design_Pattern.md)
 3. [LLD Interview Approach Guide](Learning_Resources/LLD/3_LLD_how_to_approach_interview.md)
@@ -73,29 +68,25 @@
 
 ## 🏗️ High Level Design (HLD)
 <a id="hld"></a>
-## 🏗️ High Level Design (HLD)
 
-- Coming soon...
+[Home page](Learning_Resources/HLD/README.md)
+
 
 ## ☕ Spring and Java
 <a id="spring-java"></a>
-## ☕ Spring and Java
+[Home page](Learning_Resources/Java%20and%20spring%20boot/README.md)
 
-- Coming soon...
 
 ## 🗄️ SQL
 <a id="sql"></a>
-## 🗄️ SQL
 
-- [Home page](Learning_Resources/SQL/README.md)
+[Home page](Learning_Resources/SQL/README.md)
 
-### 1. SQL Practice web application
+1. SQL Practice web application
+    - https://www.sql-practice.com/
+    - https://app.testdome.com/screening/test/658d3e884d314fd3b73c6a96cc16858f
 
-- https://www.sql-practice.com/
+2. SQL Interview Cheat Sheet
 
-- https://app.testdome.com/screening/test/658d3e884d314fd3b73c6a96cc16858f
-
-### 2. SQL Interview Cheat Sheet
-
-1. [Advanced SQL Concepts ](Learning_Resources/SQL/Advanced_SQL_Concepts.pdf)
-2. [Sql questions](Learning_Resources/SQL/Sql_questions.pdf)
+    - [Advanced SQL Concepts ](Learning_Resources/SQL/Advanced_SQL_Concepts.pdf)
+    -  [Sql questions](Learning_Resources/SQL/Sql_questions.pdf)
