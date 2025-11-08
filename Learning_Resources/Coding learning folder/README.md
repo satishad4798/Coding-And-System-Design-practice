@@ -1,4 +1,4 @@
-![datatype.jpeg](static/datatype.jpeg)
+![datatype.jpeg](../../static/coding/datatype.jpeg)
 
 # Table of Contents
 

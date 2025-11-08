@@ -776,14 +776,13 @@ public Document clone() {
 
 ## 🎭 Decorator Pattern
 
-### ✅ Intent
-- Add new behaviors to objects dynamically by placing them inside wrapper objects that contain the behaviors.
+- The decorator pattern allows us to add `new functionality to an object` dynamically without
+modifying the original code. This is achieved by creating decorator classes that wrap the original object and add new behaviors or attributes
 
 - Decorator is a structural design pattern that lets you `attach new behaviors` to objects `by placing` these objects `inside special wrapper objects` that contain the behaviors.
 
 - `add new functionality to an object` `dynamically without altering its structure`.
 
-- example : coffee machine, custom ice cream , pizza shop, layering of clothes.
 ### 💡 Real-Life Analogy
 Think of customizing a coffee order:
 - Start with basic coffee
@@ -791,6 +790,7 @@ Think of customizing a coffee order:
 - Add sugar (decorator)
 - Add whipped cream (decorator)
 Each addition wraps the previous one and adds its own behavior.
+
 
 
 ![alt text](../../static/LLD/realworld.png)

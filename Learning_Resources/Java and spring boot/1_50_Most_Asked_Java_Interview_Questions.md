@@ -4,7 +4,6 @@
 - What are the key features of Java?
 - Explain the concept of JVM, JRE, and JDK.
 - What is the difference between `==` and `.equals()` in Java?
-
   **Answer:**
   - `==` checks if two references point to the same object in memory (reference equality).
   - `.equals()` checks if two objects are logically equal (content equality), as defined by the class’s `equals()` method.
@@ -231,13 +230,6 @@
 
 ## Object-Oriented Programming (OOP)
 - What are the four pillars of OOP in Java?
-
-  **Answer:**
-  1. **Encapsulation:** Bundling data (fields) and methods that operate on the data into a single unit (class), and restricting access to some of the object's components. Achieved using access modifiers (private, public, etc.).
-  2. **Abstraction:** Hiding complex implementation details and showing only the necessary features. Achieved using abstract classes and interfaces.
-  3. **Inheritance:** Mechanism where one class (child/subclass) acquires the properties and behaviors (fields and methods) of another class (parent/superclass). Promotes code reuse.
-  4. **Polymorphism:** Ability of an object to take many forms. Achieved via method overloading (compile-time)
-
 - Explain the difference between composition and inheritance.
 
   **Answer:**

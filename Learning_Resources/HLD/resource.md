@@ -1,17 +1,6 @@
 
 1. [System design interview cheatsheet I wish existed when I was interviewing as a candidate: ](https://www.linkedin.com/posts/sai-ram-somanaboina_system-design-interview-cheatsheet-i-wish-activity-7262294399944937472-BgHy/?utm_source=share&utm_medium=member_android)
 
-2. 
-
-
-
-# system design all in one
-
-
-
-## 1. learn about spring boot design pattern.
-## 2. try moustache poc : 
-
 
 ## 3 system design udemy course  `must check`
 https://www.linkedin.com/posts/jainshrayansh_softwareengineer-activity-7288525114898333696-iJTc/?utm_source=share&utm_medium=member_android&rcm=ACoAACmrnosBhczzfRjlmsTKqtwIz9SYToCfu3o 

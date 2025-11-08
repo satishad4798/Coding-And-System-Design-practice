@@ -17,7 +17,6 @@ public class SurroundedRegions {
 
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < columns; j++) {
-
                 if (board[i][j] == 'o' && !visited[i][j]) {
                     traverseSurrounding(i, j, rows, columns, board, visited);
                 }
@@ -31,16 +30,13 @@ public class SurroundedRegions {
 
     private static boolean traverseSurrounding(int i, int j, int rows, int columns, char[][] board, boolean[][] visited) {
         visited[i][j] = true;
-
         boolean result = isSurrounded(i, j + 1, rows, columns, board, visited) &&
                 isSurrounded(i, j - 1, rows, columns, board, visited) &&
                 isSurrounded(i + 1, j, rows, columns, board, visited) &&
                 isSurrounded(i - 1, j, rows, columns, board, visited);
-
         if (result) {
             board[i][j] = 'x';
         }
-
         return result;
 
     }

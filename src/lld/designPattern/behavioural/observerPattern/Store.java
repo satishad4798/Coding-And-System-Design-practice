@@ -22,7 +22,10 @@ public class Store {
         iphoneObservable.subscribe(o2);
         iphoneObservable.subscribe(o3);
         iphoneObservable.subscribe(o4);
+        iphoneObservable.unsubscribe(o3);
 
+        iphoneObservable.getStockCount();
+        
         iphoneObservable.setStockCount(12);
         iphoneObservable.setStockCount(-5);
         iphoneObservable.setStockCount(43);
