@@ -55,6 +55,9 @@
             - Master cheatsheet
         ![datatype.jpeg](static/coding/datatype.jpeg)
 
+    - Coding Patterns
+        - [ Coding pattern ](Learning_Resources/Coding/coding_patten.md)
+        - [ Recursion Patterns](Learning_Resources/Coding/recursion_patterns.md)
 
 ## 📚 Low Level Design (LLD)
 <a id="lld"></a>
