@@ -3,34 +3,65 @@
 > Open to collaboration! If you come across something useful, feel free to raise it — I’ll review and merge it so others
 > can benefit too.
 
-# Asked in interviews :
+## Table of Contents
 
-- [ Question asked  in interview](asked_in_Interview_coding_java)
+- [How to prepare and apply for interview](#how-to-prepare)
+- [Questions Asked in interviews](#questions-asked)
+- [Coding](#coding)
+- [Low Level Design (LLD)](#lld)
+- [High Level Design (HLD)](#hld)
+- [Spring and Java](#spring-java)
+- [SQL](#sql)
+
+<a id="how-to-prepare"></a>
+## 1. How to prepare and apply for interview and what to read?
+
+- Step 1: Make a  list of target companies you want to apply to.
+- Step 2: Research `interview experiences` for your  `role` at those companies. 
+    - **This will give a idea whats asked for your role and what the expectation from your role**:
+        - LeetCode Discuss (search by company + role)[https://leetcode.com/discuss/]
+        - Google (search "<Company> interview experience")
+- Step 3: Turn on job [alerts on LinkedIn](https://www.linkedin.com/learning/linkedin-quick-tips-24566373/set-up-job-alerts) so you get notified of new openings: 
+- Step 4: Ask your network for referrals — a referral can significantly increase your chances.
+- Step 5: Apply directly via:
+    - Company careers pages
+    - [Instahyre](https://www.instahyre.com/candidate/opportunities/?matching=true) — top companies are listed here
+    - [Naukri](https://www.naukri.com/mnjuser/homepage)
+
+
+<a id="questions-asked"></a>
+## 2. Questions Asked in interviews :
+
+- [Question asked in interview](asked_in_Interview_coding_java)
 - [LLD questions asked in Interview](asked_in_interview_LLD_and_HLD)
 
-## 💻 Coding
--  [Home page](Learning_Resources/Coding/README.md)
+<a id="coding"></a>
+## 3. 💻 Coding
 
-- [useful code snippets](src/MostUsedJavaSnippetsForInterview.java)
+- [Home page](Learning_Resources/Coding/README.md)
 
-- `Code  Visualization 👀[Imp]`
+- [Useful code snippets](src/MostUsedJavaSnippetsForInterview.java)
+
+- Code visualization
     - [Algo-lens](https://jaroslaw-weber.github.io/algo-lens/list/all)
 
 - 🗺️ Roadmaps & Sheets
 
-    - Roadmaps Grouped by data stucture and algorithm
+    - Roadmaps grouped by data structure and algorithm
         - [NeetCode Question with Roadmap](https://neetcode.io/roadmap)
         - [Grind 75 questions](https://www.techinterviewhandbook.org/grind75/?mode=preferences&order=topics&grouping=topics)
         - [LeetCode 75 with Hints](https://docs.google.com/spreadsheets/d/1A2PaQKcdwO_lwxz9bAnxXnIQayCouZP6d-ENrBz_NXc/edit?gid=0#gid=0)
-        - [Leetcode 100 DSA Interview Questions](https://leetcode.com/discuss/interview-question/4258631/Top-100-DSA-Interview-Questions)
+        - [LeetCode - Top 100 DSA Interview Questions](https://leetcode.com/discuss/interview-question/4258631/Top-100-DSA-Interview-Questions)
 
-    - Others Roadmaps
-        - [Strivers RoadMap](https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2)
+    - Other roadmaps
+        - [Striver's Roadmap](https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2)
 
-    -  Master cheatsheet
-![datatype.jpeg](static/coding/datatype.jpeg)
+    - Master cheatsheet
+        ![datatype.jpeg](static/coding/datatype.jpeg)
 
 
+## 📚 Low Level Design (LLD)
+<a id="lld"></a>
 ## 📚 Low Level Design (LLD)
 
 0. [Home page](Learning_Resources/LLD/README.md)
@@ -41,22 +72,28 @@
 5. [LLD Practice Questions](Learning_Resources/LLD/4_LLD_questions_to_try.md)
 
 ## 🏗️ High Level Design (HLD)
+<a id="hld"></a>
+## 🏗️ High Level Design (HLD)
 
 - Coming soon...
 
 ## ☕ Spring and Java
+<a id="spring-java"></a>
+## ☕ Spring and Java
 
 - Coming soon...
 
+## 🗄️ SQL
+<a id="sql"></a>
 ## 🗄️ SQL
 
 - [Home page](Learning_Resources/SQL/README.md)
 
 ### 1. SQL Practice web application
 
-1. https://www.sql-practice.com/
+- https://www.sql-practice.com/
 
-2. https://app.testdome.com/screening/test/658d3e884d314fd3b73c6a96cc16858f
+- https://app.testdome.com/screening/test/658d3e884d314fd3b73c6a96cc16858f
 
 ### 2. SQL Interview Cheat Sheet
 
