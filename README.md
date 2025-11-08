@@ -31,7 +31,7 @@
 
 ## 🗄️ SQL
 
-- [Home page](/Users/satishAd47/CODING_WORSPACES/Coding_And_System_Design/Learning_Resources/SQL/README.md)
+- [Home page](Learning_Resources/SQL/README.md)
 
 ### 1. SQL Practice web application
 
