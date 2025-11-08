@@ -9,8 +9,27 @@
 - [LLD questions asked in Interview](asked_in_interview_LLD_and_HLD)
 
 ## 💻 Coding
+-  [Home page](Learning_Resources/Coding/README.md)
 
 - [useful code snippets](src/MostUsedJavaSnippetsForInterview.java)
+
+- `Code  Visualization 👀[Imp]`
+    - [Algo-lens](https://jaroslaw-weber.github.io/algo-lens/list/all)
+
+- 🗺️ Roadmaps & Sheets
+
+    - Roadmaps Grouped by data stucture and algorithm
+        - [NeetCode Question with Roadmap](https://neetcode.io/roadmap)
+        - [Grind 75 questions](https://www.techinterviewhandbook.org/grind75/?mode=preferences&order=topics&grouping=topics)
+        - [LeetCode 75 with Hints](https://docs.google.com/spreadsheets/d/1A2PaQKcdwO_lwxz9bAnxXnIQayCouZP6d-ENrBz_NXc/edit?gid=0#gid=0)
+        - [Leetcode 100 DSA Interview Questions](https://leetcode.com/discuss/interview-question/4258631/Top-100-DSA-Interview-Questions)
+
+    - Others Roadmaps
+        - [Strivers RoadMap](https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2)
+
+    -  Master cheatsheet
+![datatype.jpeg](static/coding/datatype.jpeg)
+
 
 ## 📚 Low Level Design (LLD)
 
