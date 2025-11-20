@@ -109,6 +109,40 @@ What tables/columns would you create?
 
 How do you store parent-child relations?
 
+# Round 2: LLD Round
+
+Design a Social networking site, with functionalities like adding posts, likes, comments, sending and accepting/rejecting friend request, giving 'people you may know' recommendations.
+
+After design asked questions like how to handle concurrent friend requests.
+how to tackle a situation when a single user is getting lots of friend requests.
+How to handle concurrency for each cases, how to tackle dirty read and race conditions.
+How to design a 'people you may know' feature, algo behind that and other details.
+Where to keep connections data and which database to use for each storage
+
+# Round 3:- LLD Round
+Duration (1 Hour)
+
+This round was to test my knowledge of how better I can code and design a problem.
+
+Question 1:- I was asked to design a system that helps to plan events with available rooms and time of people. It was similar to how we book rooms on Outlook and it shows whether a person is available to attend the event.
+The question was similar to this. I was asked to design a database, write Basic API and query to test SQL knowledge.
+The basic version of:- https://www.lldcoding.com/design-lld-event-calendar-machine-coding.
+
+# Round 2: LLD HLD Round
+I was asked to design the feeds section of Instagram/ Facebook. The interview went as follows
+
+Gathered the exact requirements and aked a lot of qustions to narrow down the scope.
+Can the posts be only texts or dot hey have to be images only.
+What are information needs to be stored along with the post, to help with data modeling.
+Discussed about the concistency of the problem, took an assumption that it should be eventually conceistent.
+Do we want the users to reply to the comments.
+What are the ways in which we want the users to interact with the post, (Just likes, comments, replying to comments, should the replies be nested, is sharing or saving a post required)
+Then dicussed a little about the database design for the same. What kind of database of what kind of data. Listed out the attributes of the table.
+Next question was regarding scaling and after some discussion we landed on caching and discussed the various caching strategies and eviction policies.
+Then interviewer wanted me to write the caching logic for LFU strategy. I wrote the classes, interfaces and caching logic for the LFU. Thankfully I had recently studied about it and the following video explained it beautifully ()
+The LLD logic was written on a word doc, but it depends from interviewer to interviewer. They are ore interested in knowing waht design patterns can be used, are the solid principles followed when creating a structure of the classes.
+I would also recommend using a whiteboard to map out classes. In this cases I was aware what all I wanted to do, so did not spend too much of my time there.
+
 --------------------------------------------------------------------
 
 #
