@@ -11,6 +11,7 @@
 - [Grind 75 questions](https://www.techinterviewhandbook.org/grind75/?mode=preferences&order=topics&grouping=topics)
 - [LeetCode 75 with Hints](https://docs.google.com/spreadsheets/d/1A2PaQKcdwO_lwxz9bAnxXnIQayCouZP6d-ENrBz_NXc/edit?gid=0#gid=0)
 - [Leetcode 100 DSA Interview Questions](https://leetcode.com/discuss/interview-question/4258631/Top-100-DSA-Interview-Questions)
+- [150 coding question](150_coding_question.pdf)
 
 ## 2.2 Others Roadmaps
 - [Strivers RoadMap](https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2)
