@@ -24,5 +24,9 @@
 
 ## Coding Patterns
 
+### Useful articles
+- [20 Patterns to Master Dynamic Programming](https://blog.algomaster.io/p/20-patterns-to-master-dynamic-programming?utm_source=share&utm_medium=android&r=2lbd1v&triedRedirect=true)
+
+### Other resources
 - [ Coding pattern ](coding_patten.md)
 - [ Recursion Patterns](recursion_patterns.md)
