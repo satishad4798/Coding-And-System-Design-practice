@@ -2,6 +2,9 @@
 
 > TO MAIN PAGE - [ Back to main page ](../../README.md)
 
+- [LLD questions asked in Interview](../../asked_in_interview_LLD_and_HLD.md)
+
+
 ## Table of Contents
 
 - [Interview Preparation](#interview-preparation)

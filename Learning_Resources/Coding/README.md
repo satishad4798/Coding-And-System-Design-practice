@@ -1,5 +1,7 @@
 
 
+- [Question asked in interview](../../asked_in_Interview_coding_java.md)
+
 
 #  1. 👀 Code  Visualization ( visualize the code)
 - [Algo-lens](https://jaroslaw-weber.github.io/algo-lens/list/all)
