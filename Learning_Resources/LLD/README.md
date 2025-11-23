@@ -1,9 +1,8 @@
 # LLD for Interview
 
-> TO MAIN PAGE - [ Back to main page ](../../README.md)
+> [TO MAIN PAGE](../../README.md)
 
 - [LLD questions asked in Interview](../../asked_in_interview_LLD_and_HLD.md)
-
 
 ## Table of Contents
 
@@ -26,13 +25,10 @@
 
 [ How to approach LLD Interview](3_LLD_how_to_approach_interview.md)
 
-## LLD Asked Questions
-
-[ LLD Asked Questions](../../asked_in_interview_LLD_and_HLD)
 
 ## LLD question to try
 
-[ LLD question to try](4_LLD_questions_to_try.md)
+[ LLD question asked in interview ](https://docs.google.com/spreadsheets/d/1QbEgim9xkxNqBq2wB1jdEdqyjA-0wijZRpvPdeVIJB0/edit?gid=1039129587#gid=1039129587)
 
 ## Basics
 
@@ -68,4 +64,4 @@
 |                    | Flyweight     | **Chain of Responsibility** |
 
 --------------------------------------------------------------------
-> TO MAIN PAGE - [ Back to main page ](../../README.md)
+> [TO MAIN PAGE](../../README.md)
