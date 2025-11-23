@@ -6,29 +6,20 @@
 
 ## Table of Contents
 
-- [Interview Preparation](#interview-preparation)
-    - [How to Approach LLD Interview](#how-to-approach-lld-interview)
-    - [LLD Asked Questions](#lld-asked-questions)
-    - [LLD Questions to Try](#lld-question-to-try)
-- [Core Concepts](#basics)
-    - [Class & Object Basics](#basics)
-    - [UML Diagrams](#uml)
-- [Design Principles & Patterns](#design-patterns)
-    - [SOLID Principles](#solid-principles)
-    - [Design Patterns Overview](#design-patterns)
+- **Interview Preparation**
+    - [How to Approach LLD Interview](3_LLD_how_to_approach_interview.md)
+    - [LLD Asked Questions](../../asked_in_interview_LLD_and_HLD.md)
+    - [LLD Questions to Try](https://docs.google.com/spreadsheets/d/1QbEgim9xkxNqBq2wB1jdEdqyjA-0wijZRpvPdeVIJB0/edit?gid=1039129587#gid=1039129587)
+- **Core Concepts**
+    - [Basics](#basics)
+    - [UML](#uml)
+- **Design Principles & Patterns**
+    - [SOLID Principles](1_SOLID_Principles_CheatSheet.md)
+    - [Design Patterns Overview](2_Design_pattern.md)
     - [Pattern Categories](#summary)
         - [Creational Patterns](#summary)
         - [Structural Patterns](#summary)
         - [Behavioral Patterns](#summary)
-
-## How to approach LLD Interview
-
-[ How to approach LLD Interview](3_LLD_how_to_approach_interview.md)
-
-
-## LLD question to try
-
-[ LLD question asked in interview ](https://docs.google.com/spreadsheets/d/1QbEgim9xkxNqBq2wB1jdEdqyjA-0wijZRpvPdeVIJB0/edit?gid=1039129587#gid=1039129587)
 
 ## Basics
 
@@ -44,24 +35,5 @@
 
 ![alt text](../../static/LLD/uml.png)
 
-## SOLID Principles
 
-[ SOLID Principles](1_SOLID_Principles_CheatSheet.md)
-
-## Design Patterns
-
-### [ Design patterns ](2_Design_Pattern.md)
-
-### summary
-
-| Creational         | Structural    | Behavioral                  |
-|:-------------------|:--------------|:----------------------------|
-| **Singleton**      | **Adapter**   | **Strategy**                |
-| **Factory Method** | **Decorator** | **Observer**                |
-| Abstract Factory   | Proxy         | Command                     |
-| **Builder**        | **Facade**    | State                       |
-| Prototype          | Composite     | Template Method             |
-|                    | Flyweight     | **Chain of Responsibility** |
-
---------------------------------------------------------------------
 > [TO MAIN PAGE](../../README.md)
