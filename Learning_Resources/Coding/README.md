@@ -1,7 +1,7 @@
 
 
 - [Question asked in interview](../../asked_in_Interview_coding_java.md)
-
+- [Useful code snippets for interview](../../src/MostUsedJavaSnippetsForInterview.java)
 
 #  1. 👀 Code  Visualization ( visualize the code)
 - [Algo-lens](https://jaroslaw-weber.github.io/algo-lens/list/all)
