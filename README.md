@@ -10,7 +10,7 @@
 - ### [1. Coding](Learning_Resources/Coding/README.md)
 - ### [2. LLD ](Learning_Resources/LLD/README.md)
 - ###  [3. HLD](Learning_Resources/HLD/README.md)
-- ###  [4. Spring and Java](Learning_Resources/Java%20and%20spring%20boot/README.md)
+- ###  [4. Spring and Java](Learning_Resources/Java_and_spring_boot/README.md)
 - ### [5. SQL](Learning_Resources/SQL/README.md)
 
 
