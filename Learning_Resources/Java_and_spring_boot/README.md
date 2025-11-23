@@ -19,7 +19,7 @@
 
 
 
-# Other Resources
+# Other Resources ( unorganized )
 
 - [50 Most Asked Java Interview Questions (0-3 YOE)](others/1_50_Most_Asked_Java_Interview_Questions.md)
 - [Scenario-Based Interview Questions For Java Developer](others/2_Scenario_Based_Interview_Questions_Java_and_spring.md)
