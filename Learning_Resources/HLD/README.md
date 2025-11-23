@@ -7,4 +7,4 @@
 
 3. [Top  question question asked in interview ](https://docs.google.com/spreadsheets/d/1QbEgim9xkxNqBq2wB1jdEdqyjA-0wijZRpvPdeVIJB0/edit?gid=1383754355#gid=1383754355)
 
-4. [Few System Designs question ](hld_systems.ipynb)
+4. [Few System Design question ](hld_systems.ipynb)
