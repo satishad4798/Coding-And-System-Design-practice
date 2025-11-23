@@ -1,8 +1,4 @@
-# LLD for Interview
-
 > [TO MAIN PAGE](../../README.md)
-
-- [LLD questions asked in Interview](../../asked_in_interview_LLD_and_HLD.md)
 
 ## Table of Contents
 
