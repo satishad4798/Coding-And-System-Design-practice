@@ -25,6 +25,6 @@
 - [Scenario-Based Interview Questions For Java Developer](others/2_Scenario_Based_Interview_Questions_Java_and_spring.md)
 - [Java Topics To Revise Before Your Interview](others/3_Java_Topics_To_Revise.md)
 - [Java_Topics_To_Revise_with_answer.md](others/3.1_Java_Topics_To_Revise_with_answer.md)
-- [Fail-Fast vs. Fail-Safe](Fail-Fast-vs-Fail-safe.md)
-- [Threads and Concurrency](Threads_and_concurrency.md)
+- [Fail-Fast vs. Fail-Safe](others/Fail-Fast-vs-Fail-safe.md)
+- [Threads and Concurrency](others/Threads_and_concurrency.md)
 
